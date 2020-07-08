@@ -10,14 +10,24 @@
     <section id="formulario">
         <form>
             Nombre de la pelicula:
-            <input placeholder="Nombre de la pelicula" style="margin-right: 2em;"> Año:
-            <input placeholder="2020" type="number">
-            <button type="button" class="btn btn-dark" style="margin-left: 2em;">
+            <input placeholder="Nombre de la pelicula" style="margin-right: 2em;" [(ngModel)]="manageTitle" name="Title"> Año:
+            <select class="custom-select" id="inputGroupSelect01" style="width: 194px;" [(ngModel)]="manageYear" name="Year">
+                <option selected>Seleccionar año...</option>
+                <option *ngFor="let year of years" [value]="year" >{{year}}</option>
+            </select>
+            <button type="button" class="btn btn-dark" style="margin-left: 2em;" (click)="handleClick()">
               <i class="fas fa-search-plus"></i>
             </button>
         </form>
     </section>
     <section style="padding-left: 1em;padding-right: 1em;background-color: red;margin-top: 1em;">
-
+        <div class="card" style="width: 18rem;" *ngFor="let movie in movies">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{movie.Title}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     </section>
 </section>
