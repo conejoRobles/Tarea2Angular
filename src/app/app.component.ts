@@ -53,8 +53,9 @@ export class AppComponent {
             'Genre': res.Genre,
             'Country': res.Country,
             'img': movie.Poster,
-            'Rate': movie.Ratings
+            'Rate': res.Ratings
           }
+          console.log("rate "+movie.Ratings)
           isUndefined(res.Search)?this.movies.push(mov):alert("debe ingresar un titulo")
           console.log(mov.Title)
           console.log("movies2" + this.movies)
