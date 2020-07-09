@@ -1,0 +1,14 @@
+<section id="displayMovies" class="grid-container">
+    <div class="grid-item" *ngFor="let movie of movies">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" align="center">{{movie.Title}}</h5>
+                <h6 class="card-title" align="center">Año:{{movie.Year}}</h6>
+                <h6 class="card-title" align="center">Genero:{{movie.Genre}}</h6>
+                <h6 class="card-title" align="center">Pais:{{movie.Country}}</h6>
+                <img class="card-img" src={{movie.img}} style="width: 300px;">
+                <app-star [rating]="movie.Rate"></app-star>
+            </div>
+        </div>
+    </div>
+</section>

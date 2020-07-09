@@ -20,14 +20,5 @@
             </button>
         </form>
     </section>
-    <section style="padding-left: 1em;padding-right: 1em;background-color: red;margin-top: 1em;">
-        <div class="card" style="width: 18rem;" *ngFor="let movie in movies">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{movie.Title}}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </section>
+    <app-grid [datos]="movies"></app-grid>
 </section>
